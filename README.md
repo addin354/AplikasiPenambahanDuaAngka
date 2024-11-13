@@ -1,32 +1,37 @@
-# AplikasiPenambahanDuaAngka
- Latihan 1 - Addin Husnan Nadhari
- 
-# Pada Button Tambah saya menggunakan coding
- try {
-    int angka1 = Integer.parseInt(txtAngka1.getText());
-    int angka2 = Integer.parseInt(txtAngka2.getText());
-    int hasil = angka1 + angka2;
-    txtHasil.setText(String.valueOf(hasil));
-} catch (NumberFormatException e) {
-    JOptionPane.showMessageDialog(this, "Masukkan angka yang valid", "Error", JOptionPane.ERROR_MESSAGE);
-}
+# Aplikasi Penambahan Dua Angka
+ Aplikasi ini memungkinkan pengguna untuk memasukkan dua angka dan menampilkan hasil penjumlahannya. Selain itu, terdapat opsi untuk menghapus input atau keluar dari aplikasi.
 
-# Pada Button Hapus saya menggunakan coding
-txtAngka1.setText("");
-txtAngka2.setText("");
-txtHasil.setText("");
-txtAngka1.requestFocus();
+ ## Identitas
+ - Nama : Addin Husnan Nadhari
+ - Kelas : 5B Nonreg Banjarmasin
+ - Npm : 2210010037
 
-# Pada Button Keluar saya menggunakan Coding
-System.exit(0);
+## Fitur
 
-# Pada JTextField, tambahkan KeyAdapter untuk memastikan hanya angka yang bisa dimasukkan dengan Coding
-char karakter = evt.getKeyChar();
-if (!Character.isDigit(karakter)) {
-    evt.consume();
-}
+- **Penjumlahan Dua Angka**: Pengguna dapat memasukkan dua angka dalam kolom input, kemudian mengklik tombol "Tambah" untuk melihat hasil penjumlahannya.
+- **Validasi Input**: Hanya angka yang dapat dimasukkan pada kolom input. Jika pengguna memasukkan nilai non-numerik, aplikasi akan menampilkan pesan kesalahan.
+- **Tombol Hapus**: Menghapus input dari kedua kolom angka dan kolom hasil.
+- **Tombol Keluar**: Menutup aplikasi.
 
-# Pada JTextField, saya Tambahkan FocusListener untuk membersihkan JTextField saat mendapatkan fokus dengan coding
-txtAngka1.setText("");
-txtAngka2.setText("");
+## Struktur Program
+
+Kelas utama `PenambahanDuaAngka` berfungsi sebagai JFrame untuk antarmuka pengguna. Program ini menggunakan beberapa elemen GUI:
+- **JLabel**: Menampilkan label untuk "Angka Pertama", "Angka Kedua", dan "Hasil".
+- **JTextField**: Kolom input untuk angka pertama, angka kedua, dan kolom untuk hasil penjumlahan.
+- **JButton**: Terdapat tiga tombol:
+  - **Tambah**: Melakukan operasi penjumlahan.
+  - **Hapus**: Menghapus semua input.
+  - **Keluar**: Menutup aplikasi.
+
+## Cara Menjalankan Program
+
+1. Buka project ini di lingkungan pengembangan Java, seperti NetBeans atau IntelliJ IDEA.
+2. Jalankan kelas `PenambahanDuaAngka` sebagai aplikasi Java.
+3. Masukkan dua angka pada kolom input dan tekan tombol "Tambah" untuk melihat hasilnya.
+4. Gunakan tombol "Hapus" untuk mengosongkan kolom input atau tombol "Keluar" untuk menutup aplikasi.
+
+## Catatan
+
+- Program ini hanya mendukung input numerik (angka) untuk operasi penjumlahan.
+- Jika pengguna memasukkan karakter non-numerik, aplikasi akan menampilkan pesan kesalahan.
 
